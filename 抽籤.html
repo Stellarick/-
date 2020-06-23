@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好運抽籤</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap" rel="stylesheet">
+   
+    <script>
+        var click1=function(){
+            document.getElementById("stick").src="./photo/抽籤動畫.gif";
+            setTimeout(clicking, 1500);
+        }
+
+        var clicking=function() {
+            animation.style.display="block"
+            x.style.display="block"
+         } 
+        var click2 = function(){
+            x.style.display="none"
+            animation.style.display="none"
+            document.getElementById("stick").src="./photo/抽籤動畫1.jpg"
+            setTimeout(clicked,1000)
+        }
+        var clicked=function(){
+             animation.style.display="block"
+            }  
+        
+        
+
+ 
+yudan_pic = new Array(5);
+yudan_pic[0] = "./photo/1.jpg";
+yudan_pic[1] = "./photo/2.jpg";
+yudan_pic[2] = "./photo/3.jpg";
+yudan_pic[3] = "./photo/4.jpg";
+yudan_pic[4] = "./photo/5.jpg";
+
+index = Math.floor(Math.random() * yudan_pic.length);
+document.write('<img id="animation" class="animation" src="' +yudan_pic[index]+ '" alt="" />');
+
+        var animation;
+        window.onload=function(){
+            animation=document.getElementById("animation");
+        };
+    </script>
+    
+   
+   <style type="text/CSS">
+      body{
+          background-image: url("./photo/抽籤背景.jpg");
+          background-attachment: ;
+          background-size: cover;
+          background-repeat: no-repeat;
+          font-family: 'Noto Sans TC', sans-serif; 
+          overflow-x: hidden;
+        }
+      .button{
+          margin-left: calc((1265px - 300px)/2);
+          margin-top: 10vh;
+          border-radius: 50%;
+          box-shadow: 10px 10px 5px rgb(22, 15, 15);
+          display: block;
+      }  
+      .button:hover{
+          left: 50px;
+      }
+      .bar{
+           width: 1200px;
+           height: 0px;
+           border: solid 100px rgba(0, 0, 0, 0.384);
+      }
+      .button:hover{
+            /*margin-left:  calc((1265px - 400px)/2);*/
+            margin-top: 5vh;
+            transition-duration: 1s;
+      }
+      .bottom{
+          width: 1200px;
+          height: 0px;
+          border: solid 100px black;
+          margin-bottom: -30vh;
+          margin-top: 10vh;
+      }
+      #animation{
+          margin-left: 42vh;
+          width: 357px;
+          border: 3px solid  rgb(218, 218, 218);
+          border-left: 180px solid rgb(218, 218, 218);
+          border-right: 180px solid rgb(218, 218, 218);
+          box-shadow: 0px 0px 30px rgb(111, 1, 145);
+          border-radius: 10px;
+          position: fixed;
+          display: none;
+
+      }
+      .x{
+          display: none;
+          position: fixed;
+          right: 360px;
+          top: 15px;
+          cursor: pointer;
+      }
+      .return{
+          margin-top: -140vh;
+          margin-left: 43vh;
+          height: 98vh;
+          width: 685px;
+          border: solid 10px rgb(218, 218, 218);
+          background-color:rgb(218, 218, 218);
+          position: fixed;
+          box-shadow: 0px 0px 30px rgb(111, 1, 145);
+          display: block;
+      }
+
+   </style>
+
+</head>
+
+<body>
+  <div class="bar">
+      <h1 style="margin-left: 48vh; margin-top: -30px; color: rgb(223, 208, 208);">能測出好運的線上籤 心誠則靈</h1>
+      <p  style="margin-left: 33vh; color:  rgb(223, 208, 208);">先在心中默想“今天的運氣如何？”然後點下下方紅色的按鈕就會有符合運勢的籤文出現了喔～</p>
+  </div>
+  <div>
+      <img id="stick"  style="margin-left: 360px; margin-top: 110px; width: 700px; box-shadow: 10px 10px 5px rgb(22, 15, 15) ; border-radius: 20px;" src="./photo/抽籤動畫1.jpg" alt="">
+  </div>
+  
+  <a href="#stick"><img onclick="click1();" class="button" src="./photo/抽籤按鈕.gif" alt=""></a>
+   <div class="return" >
+        <h1>　　　　　～求籤結束 請回到上一頁～</h1>
+        <h2>　　　　　　　　　若覺不滿意可以繼續求籤</h2>
+        <img style="width: 550px; margin-left: 80px;" src="./photo/緣道觀音廟.jpg" alt="">
+        <p style="margin-left: 500px; margin-top: -50px; color: rgb(196, 79, 196); text-shadow: 2px 2px 5px rgb(22, 15, 15);">緣道觀音廟</p>
+        <button class="btn btn-light" style="color: rgb(138, 46, 138); margin-left: 300px; margin-top: 30px;">回到上一頁</button>
+    </div>
+    <div class="bottom"></div>
+    <div onclick="click2();" id="x" class="x">X</div>
+   
+</body>
+
+</html>
