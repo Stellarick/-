@@ -17,14 +17,15 @@
             x.style.display="block"
          } 
         var click2 = function(){
-            x.style.display="none"
-            animation.style.display="none"
-            document.getElementById("stick").src="./photo/抽籤動畫1.jpg"
-            setTimeout(clicked,1000)
+            x.style.display="none";
+            animation.style.display="none";
+            document.getElementById("stick").src="./photo/抽籤動畫1.jpg";
+            setTimeout(dialog, 1000);
         }
-        var clicked=function(){
-             animation.style.display="block"
-            }  
+        var dialog = function(){
+            setup.style.display="block"
+        }
+       
         
         
 
@@ -62,9 +63,6 @@ document.write('<img id="animation" class="animation" src="' +yudan_pic[index]+ 
           box-shadow: 10px 10px 5px rgb(22, 15, 15);
           display: block;
       }  
-      .button:hover{
-          left: 50px;
-      }
       .bar{
            width: 1200px;
            height: 0px;
@@ -101,7 +99,7 @@ document.write('<img id="animation" class="animation" src="' +yudan_pic[index]+ 
           top: 15px;
           cursor: pointer;
       }
-      .return{
+      .setup{
           margin-top: -140vh;
           margin-left: 43vh;
           height: 98vh;
@@ -110,8 +108,23 @@ document.write('<img id="animation" class="animation" src="' +yudan_pic[index]+ 
           background-color:rgb(218, 218, 218);
           position: fixed;
           box-shadow: 0px 0px 30px rgb(111, 1, 145);
-          display: block;
+          display: none;
       }
+      .leftblock{
+          width: 330px;
+          height: 1000px;
+          background-color: red;
+          margin-left: 0px;
+          margin-top: -148vh;
+      }
+      .rightblock{
+          width: 330px;
+          height: 1000px;
+          background-color: red;
+          margin-left: 133vh;
+          margin-top: -123.5vh;
+      }
+
 
    </style>
 
@@ -127,15 +140,17 @@ document.write('<img id="animation" class="animation" src="' +yudan_pic[index]+ 
   </div>
   
   <a href="#stick"><img onclick="click1();" class="button" src="./photo/抽籤按鈕.gif" alt=""></a>
-   <div class="return" >
+   <div class="setup" id="setup" >
         <h1>　　　　　～求籤結束 請回到上一頁～</h1>
         <h2>　　　　　　　　　若覺不滿意可以繼續求籤</h2>
         <img style="width: 550px; margin-left: 80px;" src="./photo/緣道觀音廟.jpg" alt="">
         <p style="margin-left: 500px; margin-top: -50px; color: rgb(196, 79, 196); text-shadow: 2px 2px 5px rgb(22, 15, 15);">緣道觀音廟</p>
-        <button class="btn btn-light" style="color: rgb(138, 46, 138); margin-left: 300px; margin-top: 30px;">回到上一頁</button>
+        <a href=""><button class="btn btn-light" style="color: rgb(138, 46, 138); margin-left: 300px; margin-top: 30px;">回到上一頁</button></a>
     </div>
     <div class="bottom"></div>
     <div onclick="click2();" id="x" class="x">X</div>
+    <div class="leftblock"></div>
+    <div class="rightblock"></div>
    
 </body>
 
