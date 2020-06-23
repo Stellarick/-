@@ -20,9 +20,9 @@
             x.style.display="none";
             animation.style.display="none";
             document.getElementById("stick").src="./photo/抽籤動畫1.jpg";
-            setTimeout(dialog, 300);
+            setTimeout(clicked, 300);
         }
-        var dialog = function(){
+        var clicked = function(){
             setup.style.display="block"
         }
        
@@ -108,21 +108,23 @@ document.write('<img id="animation" class="animation" src="' +yudan_pic[index]+ 
           background-color:rgb(218, 218, 218);
           position: fixed;
           box-shadow: 0px 0px 30px rgb(111, 1, 145);
-          display: none;
+          display: block;
       }
       .leftblock{
           width: 330px;
           height: 1000px;
-          background-color: red;
+          background-color: rgba(211, 13, 13, 0.89);
           margin-left: 0px;
           margin-top: -148vh;
+          border-radius: 10px;
       }
       .rightblock{
           width: 330px;
           height: 1000px;
-          background-color: red;
+          background-color: rgba(211, 13, 13, 0.89);
           margin-left: 133vh;
           margin-top: -123.5vh;
+          border-radius: 10px;
       }
 
 
@@ -145,9 +147,11 @@ document.write('<img id="animation" class="animation" src="' +yudan_pic[index]+ 
         <h2>　　　　　　　　　若覺不滿意可以繼續求籤</h2>
         <img style="width: 550px; margin-left: 80px;" src="./photo/緣道觀音廟.jpg" alt="">
         <p style="margin-left: 500px; margin-top: -50px; color: rgb(196, 79, 196); text-shadow: 2px 2px 5px rgb(22, 15, 15);">緣道觀音廟</p>
-        <a href=""><button class="btn btn-light" style="color: rgb(138, 46, 138); margin-left: 300px; margin-top: 30px;">回到上一頁</button></a>
+        <a href="http://www.chance.org.tw/籤詩集/六十甲子籤/籤詩網%E2%80%A7六十甲子籤.htm" style="text-decoration: none; color:rgb(41, 17, 49); 
+        text-shadow: 3px 3px 3px #04124d ; margin-left: 100px;">欲知籤文內容請點這</a>
+        <a href=""><button class="btn btn-light" style="color: rgb(138, 46, 138); margin-left: 250px; margin-top: 40px;">回到上一頁</button></a>
     </div>
-    <div class="bottom"></div>
+    <div class="bottom" style="color: rgb(218, 218, 218); font-size: 40px;">＠copyright by Stellarick　　　　　　　　佛號持誦一聲 功德無量</div>
     <div onclick="click2();" id="x" class="x">X</div>
     <div class="leftblock"></div>
     <div class="rightblock"></div>
